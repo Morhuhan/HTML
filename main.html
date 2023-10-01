@@ -24,17 +24,143 @@
 
         <div class="page">       
 
-            <div class="menu">
-                <ul>
-                    <li>История освоения</li>
-                    <li>Цели исследования</li>
-                    <li>Будущее освоения космоса</li>
-                    <li>Обоснования</li>
-                    <li>Темы</li>
-                    <li>Смотрите также</li>
-                    <li>Ссылки</li>
+            <div>
+                <ul class="menu">
+
+                    <li>
+                        <div class="li_content">
+                            <img src="стрелка-право.png" alt="" class="toggle-submenu">
+                            <div class="li_text"> 
+                                <p>История освоения</p>
+                            </div>
+                        </div>
+
+                        <div> 
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Первые телескопы</a>
+                                    <a href="#">Первые полеты в открытый космос</a>
+                                    <a href="#">Первый объект на орбите</a>
+                                    <a href="#">Первый полет человека в открытый космос</a>
+                                    <a href="#">Исследования космоса первым астрономическим телом</a>
+                                    <a href="#">Первая космическая станция</a>
+                                    <a href="#">Первый межзвездный космический полет</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="li_content">
+                            <img src="стрелка-право.png" alt="" class="toggle-submenu">
+                            <div class="li_text"> 
+                                <p>Цели исследования</p>
+                            </div>
+                        </div>
+
+                        <div> 
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Солнце</a>
+                                    <a href="#">Меркурий</a>
+                                    <a href="#">Венера</a>
+                                    <a href="#">Земля</a>
+                                    <a href="#">Луна</a>
+                                    <a href="#">Марс</a>
+                                    <a href="#">Фобос</a>
+                                    <a href="#">Астероидов</a>
+                                    <a href="#">Юпитер</a>
+                                    <a href="#">Сатурн</a>
+                                    <a href="#">Уран</a>
+                                    <a href="#">Нептун</a>
+                                    <a href="#">Плутон</a>
+                                    <a href="#">Объекты пояса Койпера</a>
+                                    <a href="#">Кометы</a>
+                                    <a href="#">Исследование дальнего космоса</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="li_content">
+                            <img src="стрелка-право.png" alt="" class="toggle-submenu">
+                            <div class="li_text"> 
+                                <p>Будущее освоения космомса</p>
+                            </div>
+                        </div>
+
+                        <div> 
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Прорывной выстрел в звезду</a>
+                                    <a href="#">Астероиды</a>
+                                    <a href="#">Космический телескоп Джеймса Уэбба</a>
+                                    <a href="#">Программа "Артемида"</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="li_content">
+                            <img src="стрелка-право.png" alt="" class="toggle-submenu">
+                            <div class="li_text"> 
+                                <p>Обоснования</p>
+                            </div>
+                        </div>
+
+                        <div> 
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Человеческая природа</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="li_content">
+                            <div class="li_text"> 
+                                <a href="#">Ссылки</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="li_content">
+                            <div class="li_text"> 
+                                <a href="#">Смотрите также</a>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
+
+            <script>
+                // Получаем все элементы .toggle-submenu
+                const toggleButtons = document.querySelectorAll('.toggle-submenu');
+        
+                // Добавляем обработчик события клика для каждой стрелки
+                toggleButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+
+                        // Находим родительский элемент <li>
+                        const listItem = button.closest('li');
+                        
+                        // Находим подменю .submenu
+                        const submenu = listItem.querySelector('.submenu');
+        
+                        // Если подменю отображено, скрываем его, иначе отображаем
+                        if (submenu.style.display === 'flex') {
+                            submenu.style.display = 'none';
+                        } else {
+                            submenu.style.display = 'flex';
+                        }
+                    });
+                });
+            </script>
         
             <div class="main_content">
                 
@@ -95,11 +221,7 @@
 
     </div>
 
-
-
-
 </body>
-
 
 
 </html>
